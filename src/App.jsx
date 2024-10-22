@@ -16,13 +16,16 @@
 //         setName(name="Soraya")
 //     };
 
+  // más optimizado y escalable (más correcto):
+  //  const handleChangeName = (teacherName) => {
+    //                setName(teacherName)}
 
 //     return (
 //         <div>
 //         <h2>Teacher Name: {name}</h2>
 //         <ul>
-//             <li><button onClick={data}>Data</button></li>
-//             <li><button onClick={reyes}>Reyes</button></li>
+//             <li><button onClick={data}>Data</button></li> // <li onClick={()=>setName("Data")}>Data</li> // esta función anónima es obligatoria porque si ponemos directamente la función React tira primero las funciones y daría error. 
+//             <li><button onClick={reyes}>Reyes</button></li>                                           // ¿por qué funciona poniendo las funciones data, reyes y soraya? porque da error solo con funciones con parámetros
 //             <li><button onClick={soraya}>Soraya</button></li>
 //         </ul>
 //         </div>
